@@ -16,7 +16,7 @@ requirements = ["torch>=1.4"]
 
 exec(open(osp.join("pointnet2_ops", "_version.py")).read())
 
-os.environ["TORCH_CUDA_ARCH_LIST"] = "3.7+PTX;5.0;6.0;6.1;6.2;7.0;7.5"
+os.environ["TORCH_CUDA_ARCH_LIST"] = "8.0;8.6;8.9" # support the typical GPUs, e.g. 8.0 for A100, 8.6 for RTX3090, and 9.0 for H100.
 setup(
     name="pointnet2_ops",
     version=__version__,
